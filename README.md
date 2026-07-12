@@ -3,7 +3,7 @@
 
 A modern, responsive weather application built with vanilla JavaScript that displays real-time weather information for any city worldwide using the WeatherAPI service.
 
-![Weather App Screenshot](image.png)
+![the UI](image.png)
 
 ## ✨ Features
 
@@ -29,21 +29,7 @@ A modern, responsive weather application built with vanilla JavaScript that disp
 - **Webpack** - Module bundling and development server
 - **WeatherAPI** - Third-party weather data API
 
-## 📁 Project Structure
-odin-project-weather-app/
-├── src/
-│ ├── index.js # Main application logic
-│ ├── style.css # Stylesheet
-│ ├── template.html # HTML template
-│ ├── domHelper.js # DOM utility functions
-│ └── config.js # API configuration (ignored in .gitignore)
-├── dist/ # Built files (generated)
-├── webpack.config.js # Webpack configuration
-├── package.json # Dependencies and scripts
-├── .gitignore # Git ignore file
-└── README.md # Project documentation
 
-text
 
 ## 🚀 Getting Started
 
@@ -88,42 +74,3 @@ npm run build
 Script	Description
 npm run dev	Starts Webpack development server with hot reload
 npm run build	Builds the project for production
-npm run deploy	Deploys to GitHub Pages (requires build first)
-🎨 UI Features
-Gradient Background: Purple-blue gradient for visual appeal
-
-Glass-morphism Effect: Semi-transparent container with blur
-
-Animated Elements:
-
-Weather icon pulse animation
-
-Slide-in animation for weather updates
-
-Interactive Elements:
-
-Input focus states with glow effect
-
-Button hover with elevation and shadow
-
-Smooth transitions throughout
-
-🔧 Configuration
-API Configuration
-The app uses WeatherAPI's current weather endpoint. The configuration is stored in config.js:
-
-javascript
-export const API_CONFIG = {
-    BASE_URL: 'https://api.weatherapi.com/v1/current.json?key=',
-    KEY: 'your_api_key_here'
-};
-Webpack Configuration
-Entry point: src/index.js
-
-Output: dist/main.js
-
-Development server with hot reload
-
-CSS and HTML loaders configured
-
-Asset handling for images
