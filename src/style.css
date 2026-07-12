@@ -1,0 +1,175 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.weather-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 40px 35px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* App Title */
+.app-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 14px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.search-bar input::placeholder {
+    color: #999;
+}
+
+.search-bar button {
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.search-bar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.search-bar button:active {
+    transform: translateY(0px);
+}
+
+/* Weather Update Card */
+.weather-update {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e8e8e8;
+    animation: slideIn 0.5s ease;
+}
+
+/* Weather Details */
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #444;
+}
+
+.weather-details:last-of-type {
+    border-bottom: none;
+}
+
+.weather-details span:first-child {
+    font-weight: 600;
+    color: #555;
+}
+
+.weather-details span:last-child {
+    color: #333;
+    font-weight: 500;
+    text-align: right;
+}
+
+/* Weather Image */
+.weather-image {
+    display: block;
+    margin: 20px auto 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 8px;
+    border: 2px solid #667eea;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 25px 20px;
+    }
+    
+    .app-title {
+        font-size: 26px;
+    }
+    
+    .app-title::after {
+        font-size: 20px;
+    }
+    
+    .search-bar {
+        flex-direction: column;
+    }
+    
+    .search-bar button {
+        width: 100%;
+    }
+    
+    .weather-details {
+        font-size: 14px;
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    
+    .weather-details span:last-child {
+        text-align: left;
+        width: 100%;
+    }
+}
