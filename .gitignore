@@ -1,0 +1,5 @@
+node_modules
+dist
+
+# Ignore local configuration files containing keys
+config.js
